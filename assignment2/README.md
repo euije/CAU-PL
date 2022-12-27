@@ -24,18 +24,19 @@
 
 - `실행` 단계
 
-  -  | 상황                       | 처리                     | 상세 설명                                                                                                                    |
-    | -------------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+  - |상황|처리|상세 설명|
+    |-|-|-|
     | 정의되지 않은 함수명`call` | 오류 메시지 출력 및 종료 | (“Call to undefined the function name: function_name”)을 출력, 종료한다<br />(단, function_name은 정의되지 않은 함수명임). |
-    | 정의되지 않은 변수명 호출  | 오류 메시지 출력 및 종료 | (“Call to undefined the identifier: identifier”)을 출력, 종료한다<br />(단, identifier은 정의되지 않은 함수명임).          |
+    | 정의되지 않은 변수명 호출  | 오류 메시지 출력 및 종료 | (“Call to undefined the identifier: identifier”)을 출력, 종료한다<br />(단, identifier은 정의되지 않은 함수명임). |
+    
 - `구문 분석` 단계
 
-  -  | 상황                                          | 처리                          | 상세 설명                                                                                                                                                                            |
-    | --------------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-    | main 함수가 정의 X                            | 오류 메시지 출력 및 종료      | (“No starting function.”)을 출력하고 종료                                                                                                                                          |
-    | 하나의 이름이 변수명과 함수명으로 동시에 사용 | 오류 메시지 출력 및 종료      | (“Duplicate declaration of the identifier or the function name: identifier/function_name”)을 출력,종료한다.<br/> (단, identifier/function_name은 중복 정의된 변수명 또는 함수명임) |
-    | 같은 이름을 갖는 함수 2개 이상 정의           | 오류 메시지 출력 및 종료      | (“Duplicate declaration of the function name: function_name”)을 출력,종료한다.<br/> (단, function_name은 중복 정의된 함수명임)                                                     |
-    | 같은 이름을 갖는 지역 변수가 2개 이상 정의    | 오류 메시지 출력 및 오류 복구 | (“Duplicate declaration of the identifier: identifier_name”)을 출력한 다음, 나중에 중복 정의된 변수명을 삭제한 후, 실행을 계속한다. (단, identifier_name은 중복 정의된 변수명 임)  |
+  - |상황|처리|상세 설명|
+    |-|-|-|
+    |main 함수가 정의 X|오류 메시지 출력 및 종료| (“No starting function.”)을 출력하고 종료|
+    | 하나의 이름이 변수명과 함수명으로 동시에 사용 | 오류 메시지 출력 및 종료 | (“Duplicate declaration of the identifier or the function name: identifier/function_name”)을 출력,종료한다.<br/> (단, identifier/function_name은 중복 정의된 변수명 또는 함수명임) |
+    | 같은 이름을 갖는 함수 2개 이상 정의|오류 메시지 출력 및 종료| (“Duplicate declaration of the function name: function_name”)을 출력,종료한다.<br/> (단, function_name은 중복 정의된 함수명임)|
+    | 같은 이름을 갖는 지역 변수가 2개 이상 정의| 오류 메시지 출력 및 오류 복구 | (“Duplicate declaration of the identifier: identifier_name”)을 출력한 다음, 나중에 중복 정의된 변수명을 삭제한 후, 실행을 계속한다. (단, identifier_name은 중복 정의된 변수명 임)|
 
 ## 개념 상 당연한 요구 조건
 
