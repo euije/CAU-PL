@@ -1,0 +1,23 @@
+first {
+    variable a, b, c;
+    call second;
+    p;
+}
+second {
+    variable x, a;
+    b;
+    q;
+    print_ari;
+    call third;
+}
+third {
+    variable x, y, z;
+    x;
+    y;
+    f;
+    q;
+}
+main {
+    variable p, q;
+    call first;
+}
